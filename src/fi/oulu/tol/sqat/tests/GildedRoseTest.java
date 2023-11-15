@@ -185,4 +185,15 @@ public class GildedRoseTest {
 		assertEquals("quality should increace 1", 0, tuote.getQuality());
 		assertEquals("quality should increace 1", 0, tuote2.getQuality());
 	}
+	
+	@Test
+	public void test() {
+		GildedRose gr = new GildedRose();
+		Item tuote = new Item("Backstage passes to concert", 50, 10);
+		tuote.quality = 55;
+		gr.setItem(tuote);
+		gr.oneDay();
+		System.out.println(tuote.getQuality());
+		
+	}
 }

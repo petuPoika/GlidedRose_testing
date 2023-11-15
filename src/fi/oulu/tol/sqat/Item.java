@@ -30,10 +30,10 @@ public class Item {
 	}
 	public void setQuality(int quality) {
 		// added if because "The Quality of an item is never more than 50"
-		if (quality >= 0 && quality <= 50 && name != "Sulfuras, Hand of Ragnaros") {
+		if (quality >= 0 && quality <= 50 && !"Sulfuras, Hand of Ragnaros".equals(name)) {
 			this.quality = quality;
 		}
-		if (quality == 80 && name == "Sulfuras, Hand of Ragnaros") {
+		if (quality == 80 && "Sulfuras, Hand of Ragnaros".equals(name)) {
 			this.quality = quality;
 		}
 	}
