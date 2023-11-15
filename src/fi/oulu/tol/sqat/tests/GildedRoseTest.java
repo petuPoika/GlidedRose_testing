@@ -162,33 +162,27 @@ public class GildedRoseTest {
 		/* sets new items to GildedRose list*/
 		gr.setItem(tuote);
 		gr.setItem(tuote2);
-		
 		/* skips one day and items should behave act the same (quality increases by one) */
 		gr.oneDay();
 		assertEquals("quality should increace 1", 11, tuote.getQuality());
 		assertEquals("quality should increace 1", 11, tuote2.getQuality());
-		
 		/* sets sellIn values and skips one day and items should behave act the same (quality increases by two) */
 		tuote.setSellIn(10);
 		tuote2.setSellIn(10);
 		gr.oneDay();
 		assertEquals("quality should increace 2", 13, tuote.getQuality());
 		assertEquals("quality should increace 2", 13, tuote2.getQuality());
-		
 		/* sets sellIn values and skips one day and items should behave act the same  (quality increases by three) */
 		tuote.setSellIn(5);
 		tuote2.setSellIn(5);
 		gr.oneDay();
 		assertEquals("quality should increace 1", 16, tuote.getQuality());
 		assertEquals("quality should increace 1", 16, tuote2.getQuality());
-		
 		/* sets sellIn values and skips one day and items should behave act the same  (quality decreases to zero) */
 		tuote.setSellIn(0);
 		tuote2.setSellIn(0);
 		gr.oneDay();
 		assertEquals("quality should increace 1", 0, tuote.getQuality());
 		assertEquals("quality should increace 1", 0, tuote2.getQuality());
-		
 	}
-	
 }
